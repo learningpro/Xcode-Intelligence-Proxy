@@ -27,3 +27,9 @@ https://ai.t8star.cn/register?aff=U7mw51175
 <img width="1886" height="1508" alt="4" src="https://github.com/user-attachments/assets/810d45cc-3e71-4ad0-a828-76572ae9d82c" />
 <img width="1880" height="1500" alt="5" src="https://github.com/user-attachments/assets/ae788eb5-9dde-4dba-877f-56bac516fd80" />
 
+## 启动方式：
+
+```bash
+./start.sh
+```
+会启动3000端口，直接参考上图配置使用即可。
