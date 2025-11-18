@@ -15,6 +15,11 @@
 ```text
 https://ai.t8star.cn/register?aff=U7mw51175
 ```
+- 酷爱API
+  [邀请链接](https://api.kuai.host/register?aff=lziQ)
+```text
+https://api.kuai.host/register?aff=lziQ
+```
 
 
 ## 使用示例：
