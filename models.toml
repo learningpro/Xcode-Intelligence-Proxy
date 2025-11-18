@@ -1,0 +1,65 @@
+# 模型供应商配置文件
+# 本文件定义了所有可用的模型供应商及其模型信息
+# API密钥可以直接填写在下面，或者通过环境变量设置
+# 环境变量设置方式: [供应商名大写]_API_KEY (例如: ZHIPU_API_KEY)
+
+# 服务器配置
+[server]
+port = 3000
+host = "0.0.0.0"
+max_retries = 3
+retry_delay = 1000  # 毫秒
+request_timeout = 60000  # 毫秒
+
+# 模型供应商配置
+
+[zhipu]
+api_url = "https://open.bigmodel.cn/api/paas/v4"
+type = "zhipu"
+api_key = ""  # 直接填写API密钥，或通过环境变量ZHIPU_API_KEY设置
+models = [
+    { id = "glm-4.6", name = "GLM-4.6" }
+]
+
+[kimi]
+api_url = "https://api.moonshot.cn/v1"
+type = "kimi"
+api_key = ""  # 直接填写API密钥，或通过环境变量KIMI_API_KEY设置
+models = [
+    { id = "kimi-k2-0905-preview", name = "Kimi K2" }
+]
+
+[deepseek]
+api_url = "https://api.deepseek.com"
+type = "deepseek"
+api_key = ""  # 直接填写API密钥，或通过环境变量DEEPSEEK_API_KEY设置
+models = [
+    { id = "deepseek-reasoner", name = "DeepSeek Reasoner" },
+    { id = "deepseek-chat", name = "DeepSeek Chat" }
+]
+
+[t8star]
+api_url = "https://ai.t8star.cn/v1"  # 默认API URL
+type = "t8star"
+api_key = ""  # 直接填写API密钥，或通过环境变量T8STAR_API_KEY设置
+# T8Star模型列表：
+# 可以直接在此处填写，或者通过环境变量T8STAR_MODELS设置（格式：model1,model2,...）
+models = [
+    { id = "grok-4.1", name = "grok-4.1" },
+    { id = "gpt-5.1-2025-11-13", name = "gpt-5.1-2025-11-13" }
+]
+
+# 示例：添加新供应商配置
+# [new_provider]
+# api_url = "https://api.new-provider.com/v1"
+# type = "new_provider"
+# api_key = "your_api_key_here"
+# models = [
+#     { id = "new-model-1", name = "New Model 1" },
+#     { id = "new-model-2", name = "New Model 2" }
+# ]
+
+# 自定义模型配置（通过JSON字符串定义，可选）
+# 格式：[{"id": "model_id", "api_url": "https://api.example.com", "api_key": "key", "type": "openai", "name": "Model Name"}]
+[custom]
+custom_models_json = ""
