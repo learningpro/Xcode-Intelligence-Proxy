@@ -1,8 +1,3 @@
-# 模型供应商配置文件
-# 本文件定义了所有可用的模型供应商及其模型信息
-# API密钥可以直接填写在下面，或者通过环境变量设置
-# 环境变量设置方式: [供应商名大写]_API_KEY (例如: ZHIPU_API_KEY)
-
 # 服务器配置
 [server]
 port = 3000
@@ -47,6 +42,15 @@ api_key = ""  # 直接填写API密钥，或通过环境变量T8STAR_API_KEY设�
 models = [
     { id = "grok-4.1", name = "grok-4.1" },
     { id = "gpt-5.1-2025-11-13", name = "gpt-5.1-2025-11-13" }
+]
+
+[kuai]
+api_url = "https://api.kuai.host/v1"  # 默认API URL
+type = "openai" # 跟贞贞的AI工坊相似的聚合站点，写t8star或者openai
+api_key = ""
+models = [
+    { id = "claude-opus-4-1-20250805", name = "claude-opus-4-1-20250805" },
+    { id = "gpt-5.1", name = "gpt-5.1" }
 ]
 
 # 示例：添加新供应商配置
